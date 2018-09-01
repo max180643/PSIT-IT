@@ -1,10 +1,13 @@
-"""StillJumping"""
+"""
+StillJumping
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Input Text"""
+    """ Call function show_text """
     show_text(input())
 
 def show_text(text):
-    """Print Text"""
+    """ Input string and print string """
     print(text)
 
 main()

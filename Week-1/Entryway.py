@@ -1,6 +1,9 @@
-"""Entryway"""
+"""
+Entryway
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Main Function"""
+    """ Print text : "Output" """
     print("Output")
 
 main()

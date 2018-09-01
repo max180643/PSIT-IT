@@ -1,6 +1,9 @@
-"""Boomerang"""
+"""
+Boomerang
+Author : Chanwit Settavongsin
+"""
 def main(x_var, y_var, z_var):
-    """Print Number"""
+    """ Print answer of equation """
     print(x_var+1)
     print(7*y_var**3 + 2*y_var**2 - 31*y_var +1)
     print(0 - z_var)

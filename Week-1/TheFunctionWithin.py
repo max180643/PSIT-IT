@@ -1,6 +1,9 @@
-"""TheFunctionWithin"""
+"""
+TheFunctionWithin
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Print Number"""
+    """ Call equation function and Print output """
     var_a = float(input())
     var_b = float(input())
     var_c = float(input())
@@ -14,19 +17,19 @@ def main():
         , var_d**8))
 
 def var_f(num):
-    """find x"""
+    """ find f value """
     return 2*num
 
 def var_g(num):
-    """find g"""
+    """ find g value """
     return 3*num**4 - num**3 + 2*num**2 + 10
 
 def var_h(num1, num2, num3):
-    """find h"""
+    """ find h value """
     return (num3+num1)**2 - num1*num2 + num2**2
 
 def var_i(num1, num2, num3, num4):
-    """find i"""
+    """ find i value"""
     return (num1**2 + num2**2 - num3**2) / (num4**2 - 2*num1*num4 + 2*num1)
 
 main()

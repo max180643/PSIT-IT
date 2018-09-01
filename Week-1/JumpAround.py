@@ -1,6 +1,9 @@
-"""JumpAround"""
+"""
+JumpAround
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Print Number"""
+    """ Calculate the answer and print """
     number = int(input())
     print(number)
     print(number + 5)

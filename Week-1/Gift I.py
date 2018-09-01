@@ -1,4 +1,7 @@
-"""Gift I"""
+"""
+Gift I
+Author : Chanwit Settavongsin
+"""
 def main():
     """Find My Weight"""
     average = float(input())

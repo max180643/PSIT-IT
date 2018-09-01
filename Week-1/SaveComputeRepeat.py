@@ -1,6 +1,12 @@
-"""SaveComputeRepeat"""
+"""
+SaveComputeRepeat
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Print days,hours,minutes,seconds,milliseconds"""
+    """
+    Convert 492137954293754252786 milliseconds
+    to days, hours, minutes, seconds, milliseconds and print
+    """
     millisec = 492137954293754252786
     seconds = millisec // 1000
     millisec = millisec % 1000

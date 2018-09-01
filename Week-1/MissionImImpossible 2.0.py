@@ -1,4 +1,7 @@
-"""MissionImImpossible"""
+"""
+MissionImImpossible
+Author : Chanwit Settavongsin
+"""
 def main():
     """
     Find Nuclear Launch code
