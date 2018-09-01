@@ -1,6 +1,9 @@
-"""Grade II"""
+"""
+Grade II
+Author : Chanwit Settavongsin
+"""
 def main(score):
-    """Check score and Print grade"""
+    """ Check score and Print grade """
     if 100 >= score >= 95:
         print("A")
     elif 95 > score >= 90:

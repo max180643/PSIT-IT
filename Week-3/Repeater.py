@@ -1,6 +1,9 @@
-"""Repeater"""
+"""
+Repeater
+Author : Chanwit Settavongsin
+"""
 def main(text):
-    """print(text) * 100"""
+    """ print(text) * 100 """
     for _ in range(100):
         print(text)
 

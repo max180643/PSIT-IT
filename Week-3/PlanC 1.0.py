@@ -1,6 +1,9 @@
-"""PlanCDEFGHIJKLMNOPQRSTUVWXYZ"""
+"""
+PlanCDEFGHIJKLMNOPQRSTUVWXYZ
+Author : Chanwit Settavongsin
+"""
 def top(in1, in2):
-    """M.ax Function"""
+    """ M.ax Function """
     output = 0
     if in1 > in2:
         output = in1
@@ -9,7 +12,7 @@ def top(in1, in2):
     return output
 
 def low(in1, in2):
-    """M.in Function"""
+    """ M.in Function """
     output = 0
     if in1 < in2:
         output = in1
@@ -18,7 +21,11 @@ def low(in1, in2):
     return output
 
 def main(text, num1, num2, num3):
-    """S.ort"""
+    """
+    S.ort Function 
+    text = "Ascend" ; s.ort m.in to m.ax and print
+    text = "Descend" ; s.ort m.ax to m.in and print
+    """
     if text == "Ascend":
         # loop1
         num1, num2 = low(num1, num2), top(num1, num2)

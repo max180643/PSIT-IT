@@ -1,6 +1,12 @@
-"""WeightStation"""
+"""
+WeightStation
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Check Weight"""
+    """
+    Total weight more than 15000 kg, print "Overweight"
+    Each weight will not more than or less than half of average, if not print Unbalance
+    """
     # input
     avg1 = float(input())
     wheel_2 = float(input())

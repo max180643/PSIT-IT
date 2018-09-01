@@ -1,6 +1,9 @@
-"""DataSpike"""
+"""
+DataSpike
+Author : Chanwit Settavongsin
+"""
 def main(number, temp, count):
-    """Find Max Value"""
+    """ Find Max Value """
     if count < 8:
         if number > temp:
             temp = number

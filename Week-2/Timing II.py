@@ -1,6 +1,14 @@
-"""Timing II"""
+"""
+Timing II
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Print day, hour, minute, second and check"""
+    """
+    Convert input number to 
+    day, hour, minute, second and check 
+    if day digit > 5 : print ("ERR_:__:__:__")
+    else: print day, hour, minute, second
+    """
     second = int(input())
     if second >= 0:
         minute, second = divmod(second, 60)

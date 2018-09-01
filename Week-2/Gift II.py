@@ -1,6 +1,9 @@
-"""Gift II"""
+"""
+Gift II
+Author : Chanwit Settavongsin
+"""
 def main(ans):
-    """Find Gift"""
+    """ Find weight of gift is even """
     ans += check(int(input()))
     ans += check(int(input()))
     ans += check(int(input()))
@@ -12,7 +15,7 @@ def main(ans):
     print(ans)
 
 def check(weight):
-    """Check Weight is Even"""
+    """ Check Weight is Even """
     ans = 0
     if weight % 2 == 0:
         ans = weight

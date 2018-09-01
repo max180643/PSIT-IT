@@ -1,6 +1,13 @@
-"""Grade I"""
+"""
+Grade I
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Grade Calculate"""
+    """
+    Score check
+    score >= 60 ; print "Pass"
+    score < 60 ; print "Fail"
+    """
     print("Pass" if float(input()) >= 60 else "Fail")
 
 main()

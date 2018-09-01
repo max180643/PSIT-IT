@@ -1,6 +1,13 @@
-"""PlanCDEFGHIJKLMNOPQRSTUVWXYZ"""
+"""
+PlanCDEFGHIJKLMNOPQRSTUVWXYZ
+Author : Chanwit Settavongsin
+"""
 def main(text, num1, num2, num3):
-    """S.ort"""
+    """
+    S.ort number and print
+    text = "Ascend" ; s.ort m.in to m.ax and print
+    text = "Descend" ; s.ort m.ax to m.in and print
+    """
     num_1, num_2 = num_1 if num_1 < num_2 else num_2, num_1 if num_1 > num_2 else num_2
     num_1, num_3 = num_1 if num_1 < num_3 else num_3, num_1 if num_1 > num_3 else num_3
     num_2, num_3 = num_2 if num_2 < num_3 else num_3, num_2 if num_2 > num_3 else num_3

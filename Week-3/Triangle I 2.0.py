@@ -1,6 +1,9 @@
-"""Triangle I"""
+"""
+Triangle I
+Author : Chanwit Settavongsin
+"""
 def main(num_1, num_2, num_3):
-    """Check can create triangle"""
+    """ Check can create triangle """
     # find top value
     num_1, num_2 = num_1 if num_1 < num_2 else num_2, num_1 if num_1 > num_2 else num_2
     num_1, num_3 = num_1 if num_1 < num_3 else num_3, num_1 if num_1 > num_3 else num_3

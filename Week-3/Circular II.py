@@ -1,6 +1,9 @@
-"""Circular II"""
+"""
+Circular II
+Author : Chanwit Settavongsin
+"""
 def main():
-    """Check Overlapping Area"""
+    """ Check Overlapping Area """
     # input
     pos1_x, pos1_y, radius1 = float(input()), float(input()), float(input())
     pos2_x, pos2_y, radius2 = float(input()), float(input()), float(input())

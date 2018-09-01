@@ -1,6 +1,9 @@
-"""Regulation"""
+"""
+Regulation
+Author : Chanwit Settavongsin
+"""
 def main(num1, num2, str1):
-    """Print Output"""
+    """ Print Output """
     print("%30i" % (num1))
     print("%030i" % (num1))
     print("%.2f" % (num2))

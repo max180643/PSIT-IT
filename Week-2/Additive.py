@@ -1,7 +1,10 @@
-"""Additive"""
+"""
+Additive
+Author : Chanwit Settavongsin
+"""
 from math import sin, cos, radians, factorial, sqrt, log
 def main():
-    """Print Equation"""
+    """ Print value of equation """
     print((sin(radians(90)) + sin(radians(60))**2) / (cos(radians(245**2)) + cos(radians(45+135))))
     print((factorial(16)*factorial(4)) / factorial(8))
     print((15+25) / sqrt((25-12)**2+(12-15)**2))
