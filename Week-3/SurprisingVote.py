@@ -13,6 +13,6 @@ def main(total, top):
     else:
         low = total - top
     # check
-    print("Surprising" if abs(top -low) > 2 else "Not surprising")
+    print("Surprising" if top - low > 2 else "Not surprising")
 
 main(float(input()), float(input()))
