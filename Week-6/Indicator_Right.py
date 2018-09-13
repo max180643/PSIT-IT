@@ -7,18 +7,14 @@ def main(number, row):
     input number and print
     ex. number = 7
         row = 5
-    print : *******
-             *******
-              *******
-             *******
-            *******
+                        i                         sol
+    print : *******   |-2 : ' ' * (row // 2 - abs(i)) + '*' * number|
+             *******  |-1 : ' ' * (row // 2 - abs(i)) + '*' * number|
+              ******* | 0 : ' ' * (row // 2 - abs(i)) + '*' * number|
+             *******  | 1 : ' ' * (row // 2 - abs(i)) + '*' * number|
+            *******   | 1 : ' ' * (row // 2 - abs(i)) + '*' * number|
     """
-    half = row / 2
-    top = int(half) + 1
-    low = int(half)
-    for i in range(top):
-        print("%s%s" %(" " * i, "*" * number))
-    for j in range(low-1, -1, -1):
-        print("%s%s" %(" " * j, "*" * number))
+    for i in range((1 - row) // 2, row // 2 + 1):
+        print("%s%s" % (" " * (row // 2 - abs(i)), "*" * number))
 
 main(int(input()), int(input()))
