@@ -1,5 +1,5 @@
 # PSIT - Python
-This repository consists of codes of PSIT - Python, Faculty of Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL).
+This repository consists of codes of "Problem Solving in Information Technology (PSIT)" subject, Faculty of Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL).
 _____
 
 <b>Notes:</b>
