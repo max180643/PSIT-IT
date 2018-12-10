@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/img/favicon.ico?v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		        
+
+    <link rel="stylesheet" href="https://ejudge.it.kmitl.ac.th/assets/brython/3.3.1/css/console.css">
+
+		
+
+		<script src="https://ejudge.it.kmitl.ac.th/assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="https://ejudge.it.kmitl.ac.th" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it61070040 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image">
+									<p>
+										นายชาญวิทย์ เศรษฐวงศ์สิน
+										<small>Member since August, 2018</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="https://ejudge.it.kmitl.ac.th/account" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="https://ejudge.it.kmitl.ac.th/account/2002/edit#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายชาญวิทย์ เศรษฐวงศ์สิน</p>
+							<a href="https://ejudge.it.kmitl.ac.th/useronline"><i class="fa fa-circle text-success"></i>
+																	2																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">01:03:52</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="https://ejudge.it.kmitl.ac.th/course/102">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course/102/leaderboard">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+					                    <h1>
+                        compoundinterest
+                        <!-- <small>Write once ruins everywhere.</small> -->
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="https://ejudge.it.kmitl.ac.th"><i class="fa fa-folder-open"></i> Home</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course">Course</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course/102">Problem Solv...</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/problem">Problem</a></li>
+                        <li class="active">compoundinte...</li>
+                    </ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+					                    <section class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                                            <div class="box">
+                                    <div class="box-header">
+                                        <h4 class="box-title">
+                                            <i class="fa fa-list-alt"></i> Description
+                                        </h4>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="box-body">
+                                                                                        <img alt="" src="/uploads/1418524107_compound_interest.png" style="height:300px; width:450px" /><br />
+<br />
+&ldquo;Compound interest is the eighth wonder of the world. He who understands it, earns it ... he who doesn&#39;t ... pays it.&rdquo;― Albert Einstein<br />
+<br />
+Compound Interest แปลไทยก็คือ ดอกเบี้ยทบต้น<br />
+เป็นการคิดดอกเบี้ยรูปแบบหนึ่งที่หลายระบบการเงินใช้กัน หลักการคือ เอาเงินที่จะมาคิดดอกเบี้ยทั้งหมด มาคิดดอกเบี้ย ซึ่งรวมถึงเงินดอกเบี้ยปีที่แล้วด้วย เช่น<br />
+มีเงิน 1000 บาท ดอกเบี้ย 10% ต่อปี<br />
+คิดดอกเบี้ยในสิ้นปี จะทำให้มีเงินเป็น 1100 บาท (1000 + 100)<br />
+และดอกเบี้ยปีหน้า จะต้องรวมเงินที่มีทั้งหมด 1100 บาท ไปคิดดอกเบี้ยทั้งหมด เป็นที่มาของคำว่า ทบต้น<br />
+ดอกเบี้ยปีถัดไปจึงเป็น 1100 + 110 = 1210 บาท<br />
+จะเห็นได้ว่าดอกเบี้ยที่ได้มาในแต่ละปี มีจำนวนมากขึ้นเรื่อยๆตามกาลเวลาที่คิดดอกเบี้ย<br />
+<br />
+ลองยกตัวอย่างดอกเบี้ย 10% ต่อปี โดยมีเงินต้น 100,000 บาท<br />
+ให้เวลาผ่านไป 20 ปี ตารางคำตอบจะเป็นดังนี้
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border-left:none; border-right:none; width:336pt">
+	<tbody>
+		<tr>
+			<td style="height:15.0pt; width:48pt">ปี</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">เงินต้น</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">ดอกเบี้ย<br />
+			(ต่อปี)</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">เงินได้รวม</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">0</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">100000</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>10000</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">110000</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">1</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">110000</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>11000</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">121000</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">2</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">121000</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>12100</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">133100</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">3</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">133100</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>13310</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">146410</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">4</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">146410</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>14641</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">161051</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">5</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">161051</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>16105.1</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">177156.1</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">6</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">177156.1</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>17715.61</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">194871.7</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">7</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">194871.7</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>19487.17</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">214358.9</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">8</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">214358.9</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>21435.89</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">235794.8</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">9</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">235794.8</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>23579.48</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">259374.2</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">10</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">259374.3</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>25937.43</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">285311.7</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">11</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">285311.7</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>28531.17</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">313842.8</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">12</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">313842.8</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>31384.28</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">345227.1</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">13</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">345227.1</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>34522.71</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">379749.8</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">14</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">379749.8</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>37974.98</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">417724.8</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">15</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">417724.8</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>41772.48</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">459497.3</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">16</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">459497.3</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>45949.73</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">505447</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">17</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">505447</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>50544.7</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">555991.7</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">18</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">555991.7</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>55599.17</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">611590.9</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">19</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">611590.9</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>61159.09</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">672750</td>
+		</tr>
+		<tr>
+			<td style="height:15.0pt; width:48pt">20</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td style="width:48pt">672750</td>
+			<td style="width:48pt">&nbsp;</td>
+			<td>67275</td>
+			<td>&nbsp;</td>
+			<td style="width:48pt">740025</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<br />
+จะเห็นได้ว่า เพียงมีเงินหนึ่งแสนบาท เรายอมให้เวลากับมันเพียง 20 ปี<br />
+ก็จะมีเงินเพิ่มขึ้นเป็น 7.4&nbsp;เท่าของเงินต้นเลย เพียงแค่อดทนรอ<br />
+แต่ว่าระบบนี้ก็นำมาใช้กับระบบบัตรเครดิตด้วยเหมือนกัน เป็นสาเหตุที่ว่าหลายๆคนเป็นหนี้บัตรเครดิตแล้วผ่อนชำระไม่หมดเสียที เป็นเพราะระบบนี้นั่นเอง<br />
+<br />
+ใครเข้าใจจะได้ประโยชน์จากมัน ใครไม่เข้าใจจะเสียประโยชน์จากมัน<br />
+Einstein กล่าวไว้ (จริงๆนะ)<br />
+<br />
+จงหาว่า<br />
+ถ้าหากมีเงินต้น k บาท<br />
+และดอกเบี้ย r เปอร์เซ็นต์<br />
+<br />
+เวลาผ่านไป t ปี จะมีเงินเท่าใด<br />
+<br />
+ปล. อย่างไรก็ตาม จากการ์ตูนด้านล่าง ถ้าเงินเรามีความสามารถในการเพิ่มแค่ปีละ 2% คงไม่ค่อยเห็นผลของ compound interest เท่าไหร่นัก เพราะนั่นหมายความว่าจำนวนปีที่รอจะเพิ่มมากขึ้น (และถ้าเราสามารถทำเงินเราให้เพิ่มได้แค่ปีละ 2%ในแต่ละปี ก็คงไม่พอกับอัตราเงินเฟ้อที่เพิ่มขึ้นในแต่ละปี)<br />
+<br />
+<img alt="" src="/uploads/1418547566_investing.png" style="height:200px; width:454px" />
+                                        </div>
+                                    </div><!-- /.box-body -->
+                                    <div class="box-footer clearfix">
+                                        <div class="pull-right">
+                                            by <a href="https://ejudge.it.kmitl.ac.th/account/708">นางสาวศรีสกุล จรรยาลิขิต</a>
+                                            <br>
+                                            <small>
+                                                <em class="text-muted">14 November 2018, 16:15</em>
+                                            </small>
+                                        </div>
+                                    </div><!-- /.box-footer -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-file-text-o"></i> Specification
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-in"></i> Input Specification
+                                                    </th>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-out"></i> Output Specification
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <br>
+                                                        สามบรรทัด<br />
+0 &lt;= k ; เงินบาท, จำนวนเต็ม<br />
+0 &lt;= r &nbsp;; ดอกเบี้ย, จำนวนจริง<br />
+0 &lt;= t &nbsp;; เวลาหน่วยปี ; จำนวนเต็ม
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <br>
+                                                        หนึ่งบรรทัด<br />
+เป็นเงินที่ได้ในปีที่ t, ทศนิยมสองตำแหน่ง
+                                                        <br>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-list-ol"></i> Sample Case
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-in"></i> Sample Input
+                                                </th>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-out"></i> Sample Output
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                            <tr>
+                                                    <td>
+                                                        <pre>100000
+10
+20
+</pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>672749.99</pre>
+                                                    </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>
+                                                        <pre>4000000
+20
+10
+</pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>24766945.69
+</pre>
+                                                    </td>
+                                                </tr>
+                                                                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="brython hidden">
+                            <div class="box" style="height: 100%">
+                                <div class="box-header">
+                                    <h3 class="box-title">
+                                        <i class="fa fa-code"></i> Editor <small>support only Python3 and C</small>
+                                    </h3>
+                                    <button class="btn btn-danger pull-right btn-exitfullscreen"><i class="fa fa-times"></i> Close</button>
+                                    <button class="btn btn-success pull-right btn-fullscreen"><i class="fa fa-expand"></i> Full Screen</button>
+
+                                </div><!-- /.box-header -->
+                                <div class="box-body" style="height: 100%">
+                                    <div>
+
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                                                                            <li role="presentation" class="active"><a href="#brython" aria-controls="brython" role="tab" data-toggle="tab">Python3</a></li>
+                                                                                                                                </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade in active" id="brython">
+                                                                                                <!-- brython editor -->
+                                                    <div class="row" style="height: 100%;padding-top: 1em">
+    <div class="col-md-6" style="height: 100%">
+        <button id="run" class="btn btn-primary"> ▶ Run</button>
+        <button id="run" class="btn btn-info btn-judge"><i class="fa fa-legal"></i> Judge</button>
+        <br><br>
+        <div id="editor"></div>
+    </div>
+
+    <div class="col-md-6" style="height: 100%">
+        <div style="width:100%;height: 100%" >
+            <textarea id="console"></textarea>
+            Brython version: <span id="version"></span>
+            <a href="https://github.com/brython-dev/brython/issues" target="_blank">Known Issues</a> /
+            <a href="https://github.com/brython-dev/brython/issues/new" target="_blank">Report a Bug</a>
+        </div>
+    </div>
+</div>
+
+
+                                                                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade " id="gcc">
+                                                                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                    </section><!-- /.end of main content -->
+                    <section class="col-lg-3">
+                                                <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-clock-o"></i> Time Remaining
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <center>
+                                            <div>
+                                                <div id="lasttime" class="hidden"></div>
+                                                <div id="difftime" class="hidden"></div>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 20%;" id="days">
+                                                        </td>
+                                                        <td style="width: 20%;" id="hours">
+                                                        </td>
+                                                        <td style="width: 20%;" id="minutes">
+                                                        </td>
+                                                        <td style="width: 20%;" id="seconds">
+                                                        </td>
+                                                        <td style="width: 20%; vertical-align: bottom;" id="millisecs">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="dtext">Days</td>
+                                                        <td id="htext">Hours</td>
+                                                        <td id="mtext">Minutes</td>
+                                                        <td id="stext">Seconds</td>
+                                                        <td id="mstext"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </center>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                                                                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-info"></i> Information</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <dl class="dl-horizontal sm">
+                                            <dt>Time Limit</dt>
+                                            <dd>1 Second</dd>
+                                            <dt>Memory Limit</dt>
+                                            <dd>32 MB</dd>
+                                            <dt>Language</dt>
+                                            <dd>py</dd>
+                                            <dt>Deadline</dt>
+                                            <dd>11 December 2018, 22:00</dd>
+                                            <dt>Submission Limit</dt>
+                                            <dd><span class="label label-info">Unlimit</span></dd>
+                                            <dt>Restrict Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                >No Restrict</span></dd>
+                                            <dt>Required Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                      >No Restrict</span></dd>
+                                            <dt>Testcase</dt>
+                                            <dd>10 case</dd>
+                                            <dt>Rejudge Testcase</dt>
+                                            <dd>0 case</dd>
+                                            <dt>Full Score</dt>
+                                            <dd>100 Point</dd>
+                                            <dt>Bonus Score</dt>
+                                            <dd>900</dd>
+                                            <dt>Your Score</dt>
+                                            <dd>
+                                                                                            <a href="https://ejudge.it.kmitl.ac.th/problem/submission/768739" target="_blank">
+                                                    <p class="label label-success">
+                                                                                                            PPPPPPPPPP
+                                                                                                        </p>
+                                                </a>
+                                                                                        </dd>
+                                        </dl>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-cloud-upload"></i> Submit File</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form method="POST" action="https://ejudge.it.kmitl.ac.th/problem/4193/send" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="zfplOPlWAZ6CqtyHZSSuiYqDCo5W6keZs6m89VI7">
+                                            <div class="form-group">
+                                                <input type="file" id="file" name="file" class="form-control file">
+                                            </div>
+                                            <input type="hidden" id="codesubmmit" name="code" class="form-control">
+                                            <input type="hidden" id="langsubmmit" name="lang" class="form-control">
+                                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                    </section>
+                    				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="https://ejudge.it.kmitl.ac.th/assets/js/bootstrap.min.js" type="text/javascript"></script>
+                
+        <script >// set the date we're counting down to
+        var target_date = new Date("Dec 11, 2018 22:00:00").getTime();
+        // variables for time units
+        var days, hours, minutes, seconds, millisecs;
+        $('#difftime').html(1544465032*1000 - $.now());
+        // get tag element
+        $('#lasttime').html($.now() + difftime);
+        // update the tag with id "countdown" every 1 second
+        var request = false;
+        function coutdownTime () {
+
+            // find the amount of "seconds" between now and target
+            var difftime = parseInt($('#difftime').html());
+            var lasttime = parseInt($('#lasttime').html());
+            var current_date = $.now()+ difftime;
+            $('#lasttime').html(current_date);
+            if(request === false && Math.abs(current_date-lasttime) > 2000){
+                clearInterval(timer);
+                request = true;
+                $.get( "/timems")
+                    .done(function( time ) {
+                        request = false;
+                        time = parseInt(time);
+                        difftime = time - $.now();
+                        current_date = $.now() + difftime;
+                        $('#difftime').html(difftime);
+                        $('#lasttime').html(current_date);
+                        timer = setInterval(coutdownTime, 69);
+                        console.log(time);
+
+                    })
+                    .fail(function( jqxhr, textStatus, error ) {
+                        request = false;
+                        console.log("Sync Time Fail");
+                    });
+                return;
+            }
+            var seconds_left = (target_date - current_date) / 1000;
+
+            // do some time calculations
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
+
+            millisecs = parseInt((target_date - current_date) % 1000);
+
+            // format countdown string + set tag value
+            d = " Days ";
+            h = " Hours ";
+            m = " Minutes ";
+            s = " Seconds ";
+            if(seconds == "1" || seconds == "0"){ s = " Second "; }
+            if(minutes == "1" || minutes == "0"){ m = " Minute "; }
+            if(hours == "1" || hours == "0"){ h = " Hour "; }
+            if(days == "1" || days == "0"){ d = " Day "; }
+
+            if(hours<=0 && minutes<=0 && seconds<=0)
+            {
+                clearInterval(timer);
+                return;
+            }
+            else
+            {
+                document.getElementById("days").innerHTML = '<h2>'+days+'</h2>';
+                document.getElementById("hours").innerHTML = '<h2>'+hours+'</h2>';
+                document.getElementById("minutes").innerHTML = '<h2>'+minutes+'</h2>';
+                document.getElementById("seconds").innerHTML = '<h2>'+seconds+'</h2>';
+                document.getElementById("millisecs").innerHTML = '<h4>'+millisecs+'</h4>';
+                document.getElementById("dtext").innerHTML = d;
+                document.getElementById("htext").innerHTML = h;
+                document.getElementById("mtext").innerHTML = m;
+                document.getElementById("stext").innerHTML = s;
+            }
+        }
+        var timer = setInterval(coutdownTime, 69);
+    </script>
+    
+
+    <!-- brython -->
+    <script type="text/javascript" src="https://ejudge.it.kmitl.ac.th/assets/brython/3.3.1/js/brython.js"></script>
+    <script type="text/javascript" src="https://ejudge.it.kmitl.ac.th/assets/brython/3.3.1/js/brython_stdlib.js"></script>
+    <script src="https://ejudge.it.kmitl.ac.th/assets/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ejudge.it.kmitl.ac.th/assets/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ejudge.it.kmitl.ac.th/assets/ace/mode-python3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ejudge.it.kmitl.ac.th/assets/ace/snippets/python.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/python">
+    import sys
+    import time
+    import traceback
+    import javascript
+    from browser import document as doc, window, alert, console
+    def show_console(ev):
+        doc["console"].value = output
+        doc["console"].cols = 60
+
+    # load a Python script
+    def load_script(evt):
+        _name = evt.target.value + '?foo=%s' % time.time()
+        editor.setValue(open(_name).read())
+
+    # run a script, in global namespace if in_globals is True
+    def run(*args):
+        global output
+        doc["console"].value = ''
+        src = editor.getValue()
+        if storage is not None:
+            storage["524"] = src
+
+        t0 = time.perf_counter()
+        try:
+            ns = {'__name__':'__main__'}
+            exec(src, ns)
+            state = 1
+        except Exception as exc:
+            traceback.print_exc(file=sys.stderr)
+            state = 0
+        output = doc["console"].value
+
+        print('<completed in %6.2f ms>' % ((time.perf_counter() - t0) * 1000.0))
+        return state
+
+    def to_str(xx):
+        return str(xx)
+
+    def show_js(ev):
+        src = editor.getValue()
+        doc["console"].value = javascript.py2js(src, '__main__')
+
+    def reset_src():
+        if storage is not None and "524" in storage:
+            editor.setValue(storage["524"])
+        else:
+
+            editor.setValue('''\"\"\"
+compoundinterest
+Author : Chanwit Settavongsin
+\"\"\"
+def main(money, interest, year):
+    \"\"\" Find money with Compound Interest \"\"\"
+    for _ in range(year):
+        money = money + (money * interest / 100)
+    print(\"%.2f\" % (money))
+
+main(int(input()), float(input()), int(input()))
+''')
+
+
+        editor.scrollToRow(0)
+        editor.gotoLine(0)
+
+    def reset_src_area():
+        if storage and "524" in storage:
+            editor.value = storage["524"]
+        else:
+
+
+            editor.setValue('''\"\"\"
+compoundinterest
+Author : Chanwit Settavongsin
+\"\"\"
+def main(money, interest, year):
+    \"\"\" Find money with Compound Interest \"\"\"
+    for _ in range(year):
+        money = money + (money * interest / 100)
+    print(\"%.2f\" % (money))
+
+main(int(input()), float(input()), int(input()))
+''')
+
+    has_ace = True
+    try:
+        editor = window.ace.edit("editor")
+        session = editor.getSession()
+        session.setMode("ace/mode/python")
+        editor.setOptions({
+         'enableLiveAutocompletion': True,
+         'enableSnippets': True,
+         'highlightActiveLine': False,
+         'highlightSelectedWord': True,
+         'useSoftTabs': True
+        })
+        doc['run'].bind('click',run)
+    except:
+        from browser import html
+        editor = html.TEXTAREA(rows=20, cols=70)
+        doc["editor"] <= editor
+        def get_value(): return editor.value
+        def set_value(x):editor.value = x
+        editor.getValue = get_value
+        editor.setValue = set_value
+        has_ace = False
+
+    if hasattr(window, 'localStorage'):
+        from browser.local_storage import storage
+        if 'user_id' not in storage:
+            storage['user_id'] = '2002'
+    elif storage['user_id'] != '2002':
+        storage.clear()
+        storage['user_id'] = '2002'
+
+    else:
+        storage = None
+
+    if 'set_debug' in doc:
+        __BRYTHON__.debug = int(doc['set_debug'].checked)
+
+
+
+    class cOutput:
+
+        def write(self, data):
+            doc["console"].value += str(data)
+
+        def flush(self):
+            pass
+
+    if "console" in doc:
+        sys.stdout = cOutput()
+        sys.stderr = cOutput()
+    info = sys.implementation.version
+    doc['version'].text = '%s.%s.%s' % (info.major, info.minor, info.micro)
+
+    output = ''
+
+    if has_ace:
+        reset_src()
+    else:
+        reset_src_area()
+
+
+    </script>
+    <script>
+        $(function() {
+            brython();
+            $('.btn-exitfullscreen').click(function () {
+                $('.brython').removeClass('fullscreen');
+            });
+            $('.btn-fullscreen').click(function () {
+                $('.brython').addClass('fullscreen');
+            });
+            $('.btn-judge').click(function () {
+                var code = ace.edit("editor").getValue();
+                $('#codesubmmit').val(code);
+                $('#langsubmmit').val('py');
+                $("form").submit();
+            });
+        });
+    </script>
+        <script src="https://ejudge.it.kmitl.ac.th/assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1544465032000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
